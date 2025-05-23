@@ -29,7 +29,7 @@ import { useSidebar } from '@/components/ui/sidebar';
 
 export function AppSidebar() {
     const pathname = usePathname();
-    const { openMobile, setOpenMobile } = useSidebar();
+    const { setOpenMobile } = useSidebar();
     //const { resolvedTheme } = useTheme();
     useTheme();
 
