@@ -19,8 +19,18 @@ quando eu era mais jovem, sempre via aqueles dashboards prontos onde você só p
 
 Aqui está uma versão demo da estrutura base do projeto para você conhecer e usar.
 
-## Telas da versão completa  
-*(Em breve adicionarei algumas imagens aqui)*
+## Telas da versão completa
+
+Aqui estão algumas das imagens da versão completa do dashboard:
+
+## Telas da versão completa
+
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="./public/tela01.png" alt="Tela 01" width="200" />
+  <img src="./public/tela02.png" alt="Tela 02" width="200" />
+  <img src="./public/tela03.png" alt="Tela 03" width="200" />
+  <img src="./public/tela04.png" alt="Tela 04" width="200" />
+</div>
 
 ## Demo  
 [Link para demo]
