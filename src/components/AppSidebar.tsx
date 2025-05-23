@@ -25,10 +25,11 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/component
 import { Button } from './ui/button';
 import { useTheme } from 'next-themes';
 import { Logo } from './Logo';
+import { useSidebar } from '@/components/ui/sidebar';
 
 export function AppSidebar() {
     const pathname = usePathname();
-
+    const { openMobile, setOpenMobile } = useSidebar();
     //const { resolvedTheme } = useTheme();
     useTheme();
 
@@ -54,7 +55,7 @@ export function AppSidebar() {
                         <SidebarMenu>
                             <SidebarMenuItem>
                                 <SidebarMenuButton asChild isActive={isActive('/')}>
-                                    <Link href="/">
+                                    <Link href="/" onClick={() => setOpenMobile(false)}>
                                         <LayoutDashboard />
                                         <span>Dashboard</span>
                                     </Link>
@@ -73,22 +74,22 @@ export function AppSidebar() {
                                         <SidebarMenuSub>
                                             <SidebarMenuSubItem>
                                                 <SidebarMenuSubButton asChild isActive={isActive('/components/forms')}>
-                                                    <Link href="/components/forms">Forms</Link>
+                                                    <Link href="/components/forms" onClick={() => setOpenMobile(false)}>Forms</Link>
                                                 </SidebarMenuSubButton>
                                             </SidebarMenuSubItem>
                                             <SidebarMenuSubItem>
                                                 <SidebarMenuSubButton asChild isActive={isActive('/components/charts')}>
-                                                    <Link href="/components/charts">Charts</Link>
+                                                    <Link href="/components/charts" onClick={() => setOpenMobile(false)}>Charts</Link>
                                                 </SidebarMenuSubButton>
                                             </SidebarMenuSubItem>
                                             <SidebarMenuSubItem>
                                                 <SidebarMenuSubButton asChild isActive={isActive('/components/tables')}>
-                                                    <Link href="/components/tables">Tables</Link>
+                                                    <Link href="/components/tables" onClick={() => setOpenMobile(false)}>Tables</Link>
                                                 </SidebarMenuSubButton>
                                             </SidebarMenuSubItem>
                                             <SidebarMenuSubItem>
                                                 <SidebarMenuSubButton asChild isActive={isActive('/components/sonners')}>
-                                                    <Link href="/components/sonners">Sonner</Link>
+                                                    <Link href="/components/sonners" onClick={() => setOpenMobile(false)}>Sonner</Link>
                                                 </SidebarMenuSubButton>
                                             </SidebarMenuSubItem>
                                         </SidebarMenuSub>
@@ -107,7 +108,7 @@ export function AppSidebar() {
                         <SidebarMenu>
                             <SidebarMenuItem>
                                 <SidebarMenuButton asChild isActive={isActive('/dashboard/profile')} className='hover:bg-primary hover:text-primary-foreground'>
-                                    <Link href="/dashboard/profile">
+                                    <Link href="/dashboard/profile" onClick={() => setOpenMobile(false)}>
                                         <User />
                                         <span>Profile</span>
                                     </Link>
@@ -115,7 +116,7 @@ export function AppSidebar() {
                             </SidebarMenuItem>
                             <SidebarMenuItem>
                                 <SidebarMenuButton asChild isActive={isActive('/dashboard/settings')} className='hover:bg-primary hover:text-primary-foreground'>
-                                    <Link href="/dashboard/settings">
+                                    <Link href="/dashboard/settings" onClick={() => setOpenMobile(false)}>
                                         <Settings />
                                         <span>Settings</span>
                                     </Link>
@@ -123,7 +124,7 @@ export function AppSidebar() {
                             </SidebarMenuItem>
                             <SidebarMenuItem>
                                 <SidebarMenuButton asChild isActive={isActive('/dashboard/reset-password')} className='hover:bg-primary hover:text-primary-foreground'>
-                                    <Link href="/dashboard/reset-password">
+                                    <Link href="/dashboard/reset-password" onClick={() => setOpenMobile(false)}>
                                         <Settings />
                                         <span>Reset Password</span>
                                     </Link>

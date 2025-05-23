@@ -10,7 +10,7 @@ export function Header() {
     const { toggleSidebar } = useSidebar();
 
     return (
-        <header className="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 border-b bg-background md:pr-4 md:pl-0 px-4">
+        <header className="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 border-b bg-background md:pr-4 md:pl-4 px-4">
             <Button variant="outline" size="icon" className=" cursor-pointer md:hidden" onClick={toggleSidebar}>
                 <Menu className="h-5 w-5 " />
                 <span className="sr-only">Toggle Menu</span>
