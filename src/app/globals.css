@@ -19,7 +19,8 @@
   background-color: var(--primary);
 }
 
-.theme-yellow.dark .data-\[active\=true\]\:bg-sidebar-accent[data-active="true"] {
+.theme-yellow.dark
+  .data-\[active\=true\]\:bg-sidebar-accent[data-active="true"] {
   color: var(--color-black);
 }
 
@@ -98,7 +99,6 @@
   --primary-hex: #6a1b9a;
   --secondary-hex: #8e24aa;
 }
-
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -250,7 +250,7 @@
   --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.546 0.245 262.881);
-  --primary-foreground: oklch(0.379 0.146 265.522);
+  --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.274 0.006 286.033);
